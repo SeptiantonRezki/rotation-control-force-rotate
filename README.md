@@ -1,6 +1,6 @@
 # Rotation Control: Force Rotate
 
-A native Kotlin/XML Android application targeting API 35 (min API 26). Open this directory in Android Studio or build with `./gradlew :app:assembleDebug`.
+A native Kotlin/XML Android application targeting API 36 (min API 26). Open this directory in Android Studio or build with `./gradlew :app:assembleDebug`.
 
 See [REQUIREMENTS.md](REQUIREMENTS.md) for the implementation-aligned requirements. It supersedes technical assumptions in the original SRS that conflict with Android platform behavior or the UI/UX decisions made during implementation.
 

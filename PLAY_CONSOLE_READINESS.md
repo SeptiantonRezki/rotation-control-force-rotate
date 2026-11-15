@@ -1,5 +1,11 @@
 # Play Console and release checklist
 
+## Current Android API requirement
+
+This is a new Google Play app submission. As of 31 August 2026, new apps and app updates must target Android 16 (API 36) or higher. The release build now compiles and targets API 36 with Android Gradle Plugin 8.13.2 and Gradle 8.13. See [Google Play's target API requirements](https://support.google.com/googleplay/android-developer/answer/11926878) and [Android 16 behavior changes](https://developer.android.com/about/versions/16/behavior-changes-16).
+
+On displays at least 600 dp wide, Android 16 ignores app orientation restrictions by default. Rotation behavior for third-party apps on tablets, foldables, and desktop-sized windows can therefore differ from phones; the app does not opt out of Android's large-screen behavior.
+
 ## Signing
 
 The release build is signed only when all four values are supplied by either `keystore.properties` or the environment. `keystore.properties` takes precedence.
@@ -19,8 +25,8 @@ An RSA 3072-bit upload key has now been generated locally, and the signed bundle
 - **AccessibilityService:** The user must opt in from Android Accessibility settings after the in-app disclosure. Complete the Accessibility API declaration, explain foreground package detection in the Play listing, and do not mark this app as an accessibility tool: its core purpose is not direct disability support. See [Google Play's Accessibility API policy](https://support.google.com/googleplay/android-developer/answer/16558241).
 - **Phone state:** The optional call bypass explains the feature before requesting `READ_PHONE_STATE`. It observes only `IDLE`, `RINGING`, and `OFFHOOK` states; it does not use the phone number or call history. Android requires this permission to register the call-state listener; users can leave this optional feature disabled.
 - **`specialUse` foreground service:** The manifest declares the required service subtype and API 34+ permission. Submit the service type and use case in Play Console App content and provide any requested demonstration. Approval is reviewed by Google Play; the manifest alone does not grant approval. See [Android's foreground service type requirements](https://developer.android.com/about/versions/14/changes/fgs-types-required).
-- **Ads and consent:** UMP consent information is refreshed on launch. Banner and native requests are held until UMP says ads may be requested; initialization and the ready callback are guarded against duplicate completion. A Privacy options button appears when UMP reports it is required. See [UMP's Android setup guidance](https://developers.google.com/admob/android/privacy).
-- **Privacy policy:** Publish the static `docs/` directory through GitHub Pages, then add the resulting public `privacy-policy.html` URL to Play Console and keep the in-app Privacy Policy button pointed at that URL.
+- **Ads and consent:** The release uses Google Mobile Ads SDK 25.5.0 and UMP 4.0.0. UMP consent information is refreshed on launch. Banner and native requests are held until UMP says ads may be requested; initialization and the ready callback are guarded against duplicate completion. A Privacy options button appears when UMP reports it is required. Google now prefers its GMA Next-Gen SDK; Legacy v25 remains supported for ad serving until June 30, 2027, so plan that migration separately. See [UMP setup](https://developers.google.com/admob/android/privacy) and [GMA SDK lifecycle](https://developers.google.com/ads/blog/posts/2026/07/announcing-google-mobile-ads-next-gen).
+- **Privacy policy:** The static `docs/` site is deployed at GitHub Pages and the public `privacy-policy.html` URL has been verified. Add that URL to Play Console and keep the in-app Privacy Policy button pointed at the same page.
 - **Notification permission:** Android 13+ requests notification permission at runtime. The service still needs the system's foreground-service notification behavior on all supported devices.
 
 ## R8 and Android framework entry points

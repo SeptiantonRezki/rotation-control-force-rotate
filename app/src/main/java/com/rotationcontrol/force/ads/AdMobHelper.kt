@@ -109,7 +109,7 @@ object AdMobHelper {
         val density = activity.resources.displayMetrics.density
         val measuredAvailableWidth = container.width - container.paddingLeft - container.paddingRight
         val widthDp = (measuredAvailableWidth / density).toInt().coerceAtLeast(1)
-        ad.setAdSize(AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(activity, widthDp))
+        ad.setAdSize(AdSize.getLargeAnchoredAdaptiveBannerAdSize(activity, widthDp))
         container.removeAllViews()
         container.addView(ad, FrameLayout.LayoutParams(-1, -2))
         ad.loadAd(AdRequest.Builder().build())

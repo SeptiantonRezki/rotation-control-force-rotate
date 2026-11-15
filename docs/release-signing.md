@@ -20,6 +20,8 @@ The fingerprints identify the public certificate and can be shared with release 
 
 ## Build a signed release
 
+The release targets Android 16 (API 36), as required for new Google Play submissions since August 31, 2026. It uses Android Gradle Plugin 8.13.2, Gradle 8.13, Google Mobile Ads SDK 25.5.0, and UMP 4.0.0. On Android 16 large displays (smallest width at least 600 dp), the platform ignores per-app orientation restrictions by default; see the [Android 16 behavior changes](https://developer.android.com/about/versions/16/behavior-changes-16).
+
 The project reads signing values from the ignored `keystore.properties` file or from `ROTATION_RELEASE_STORE_FILE`, `ROTATION_RELEASE_STORE_PASSWORD`, `ROTATION_RELEASE_KEY_ALIAS`, and `ROTATION_RELEASE_KEY_PASSWORD` environment variables. With the local files present, run:
 
 ```sh

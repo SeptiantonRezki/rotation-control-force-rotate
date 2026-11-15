@@ -8,7 +8,7 @@
 - App icon: [`play-store-assets/app-icon/rotation-control-icon-512.png`](play-store-assets/app-icon/rotation-control-icon-512.png), 512 × 512 PNG
 - Feature graphic: [`play-store-assets/feature-graphic/rotation-control-feature-graphic.png`](play-store-assets/feature-graphic/rotation-control-feature-graphic.png), 1024 × 500 PNG
 - Screenshots: [`play-store-assets/screenshots/`](play-store-assets/screenshots/)
-- Privacy policy: `https://septiantonrezki.github.io/rotation-control-force-rotate/privacy-policy.html` (publish the `docs/` folder with GitHub Pages before entering this URL in Play Console)
+- Privacy policy: `https://septiantonrezki.github.io/rotation-control-force-rotate/privacy-policy.html` (deployed and verified public)
 - Support contact: `septianrezki17@gmail.com`
 
 ## Full description — English
@@ -30,6 +30,8 @@ Modify system settings is needed to change Android's rotation settings. Per-App 
 
 Android and individual apps may enforce their own orientation behavior. Results can vary by device, Android version, and the app or system screen in use.
 
+On Android 16 or later on large-screen displays (600 dp or wider), the platform may ignore an individual app's orientation restrictions. Per-app rotation behavior can therefore differ on tablets, foldables, and desktop-sized windows.
+
 ## Deskripsi lengkap — Bahasa Indonesia
 
 Pilih orientasi layar yang paling nyaman untuk Anda.
@@ -48,6 +50,8 @@ Rotation Control memberi akses cepat ke sembilan mode rotasi, profil opsional pe
 Akses Ubah setelan sistem diperlukan untuk mengubah pengaturan rotasi Android. Profil per aplikasi menggunakan akses visibilitas aplikasi terpasang untuk menampilkan aplikasi yang dapat dibuka. Layanan Aksesibilitas opsional memantau nama paket aplikasi di latar depan untuk menerapkan profil pilihan dan menangani layar installer; layanan ini tidak membaca teks atau isi jendela. Fitur jeda panggilan opsional hanya menggunakan status panggilan.
 
 Android dan masing-masing aplikasi dapat menerapkan kebijakan orientasinya sendiri. Hasil bisa berbeda menurut perangkat, versi Android, serta aplikasi atau layar sistem yang digunakan.
+
+Pada Android 16 atau lebih baru di layar besar (lebar minimal 600 dp), sistem dapat mengabaikan batas orientasi yang ditetapkan aplikasi tertentu. Karena itu, perilaku profil per aplikasi bisa berbeda di tablet, perangkat lipat, dan jendela desktop.
 
 ## Suggested Play Console declarations
 

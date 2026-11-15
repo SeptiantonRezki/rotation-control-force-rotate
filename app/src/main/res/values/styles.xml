@@ -1,0 +1,25 @@
+<resources>
+    <style name="Theme.RotationControl" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:windowBackground">@drawable/bg_ethereal_gradient</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="android:colorAccent">@color/ethereal_lavender</item>
+        <item name="colorPrimary">@color/ethereal_lavender</item>
+        <item name="colorOnPrimary">@color/ethereal_button_text</item>
+        <item name="colorSecondary">@color/ethereal_mint</item>
+        <item name="colorOnSecondary">@color/ethereal_button_text</item>
+        <item name="colorTertiary">@color/ethereal_gold</item>
+        <item name="colorSurface">@color/ethereal_surface</item>
+        <item name="colorSurfaceVariant">@color/ethereal_surface_variant</item>
+        <item name="colorSurfaceContainer">@color/ethereal_surface_variant</item>
+        <item name="colorOnSurface">@color/ethereal_text_primary</item>
+        <item name="colorOnSurfaceVariant">@color/ethereal_text_secondary</item>
+        <item name="colorOutline">#668B5CF6</item>
+        <item name="colorOutlineVariant">#338B5CF6</item>
+        <item name="android:textColorPrimary">@color/ethereal_text_primary</item>
+        <item name="android:textColorSecondary">@color/ethereal_text_secondary</item>
+    </style>
+</resources>

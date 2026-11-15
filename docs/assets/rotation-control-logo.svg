@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Rotation Control logo">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0D0B21"/><stop offset=".55" stop-color="#17102F"/><stop offset="1" stop-color="#3B1E68"/></linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFFFFF" stop-opacity=".17"/><stop offset="1" stop-color="#D8B4FE" stop-opacity=".07"/></linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <circle cx="256" cy="256" r="193" fill="#5EEAD4" opacity=".035"/>
+  <path d="M130 214c21-67 79-108 145-108 42 0 79 16 105 46" fill="none" stroke="#D8B4FE" stroke-width="24" stroke-linecap="round"/>
+  <path d="m357 126 61 39-73 20z" fill="#5EEAD4"/>
+  <path d="M382 297c-21 67-79 108-145 108-42 0-79-16-105-46" fill="none" stroke="#5EEAD4" stroke-width="24" stroke-linecap="round"/>
+  <path d="m155 386-61-39 73-20z" fill="#D8B4FE"/>
+  <rect x="197" y="158" width="118" height="198" rx="27" fill="url(#glass)" stroke="#E6FFFFFF" stroke-width="13"/>
+  <path d="M228 184h56" stroke="#D8B4FE" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="256" cy="324" r="11" fill="#5EEAD4"/>
+</svg>

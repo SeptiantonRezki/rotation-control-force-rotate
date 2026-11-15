@@ -1,0 +1,25 @@
+<resources>
+    <color name="ethereal_background_top">#0D0B21</color>
+    <color name="ethereal_background_bottom">#241445</color>
+    <color name="ethereal_text_primary">#E6FFFFFF</color>
+    <color name="ethereal_text_secondary">#99FFFFFF</color>
+    <color name="ethereal_lavender">#D8B4FE</color>
+    <color name="ethereal_mint">#5EEAD4</color>
+    <color name="ethereal_gold">#FDE68A</color>
+    <color name="ethereal_glass_fill">#1AFFFFFF</color>
+    <color name="ethereal_glass_stroke">#33FFFFFF</color>
+    <color name="ethereal_glass_tint">#1F241E3B</color>
+    <color name="ethereal_surface">#17132B</color>
+    <color name="ethereal_surface_variant">#241D3A</color>
+    <color name="ethereal_button_text">#1A1230</color>
+    <color name="ethereal_ripple">#1AD8B4FE</color>
+    <color name="ethereal_navigation_checked">#D8B4FE</color>
+    <color name="ethereal_navigation_unchecked">#99FFFFFF</color>
+    <color name="ethereal_active_card_fill">#38392850</color>
+    <color name="ethereal_active_card_stroke">#995EEAD4</color>
+    <color name="ethereal_card_stroke">#33FFFFFF</color>
+    <color name="ethereal_track">#667D6A98</color>
+    <color name="ethereal_control_track">#667D6A98</color>
+    <color name="ethereal_dropdown_fill">#241A1530</color>
+    <color name="ethereal_dropdown_stroke">#668B5CF6</color>
+</resources>

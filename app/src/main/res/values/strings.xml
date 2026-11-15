@@ -1,0 +1,1 @@
+<resources><string name="app_name">Rotation Control</string><string name="accessibility_disclosure">Optional accessibility service that detects the foreground app package to apply the rotation profile selected by you and temporarily use Auto-Rotate on package installer screens. It does not read window content.</string></resources>

@@ -1,0 +1,18 @@
+:root{color-scheme:dark;--ink:#f5f0ff;--muted:#c4b9d8;--mint:#5eead4;--lav:#d8b4fe;--glass:rgba(255,255,255,.075)}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:linear-gradient(150deg,#0d0b21 0%,#17102f 55%,#241445 100%);color:var(--ink);font:16px/1.68 system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--mint);text-underline-offset:3px}
+.page{width:min(900px,calc(100% - 32px));margin:0 auto;padding:40px 0 28px}
+.brand{display:flex;gap:16px;align-items:center;margin:0 4px 24px}
+.brand img{width:64px;height:64px;flex:none}
+.brand-name{color:var(--ink);font-size:21px;font-weight:700;text-decoration:none}
+.brand p,.muted,footer{color:var(--muted);margin:2px 0}
+.panel{padding:clamp(22px,5vw,44px);border:1px solid rgba(216,180,254,.27);border-radius:26px;background:var(--glass);box-shadow:0 24px 70px rgba(0,0,0,.19)}
+.eyebrow{color:var(--mint);font-size:12px;font-weight:700;letter-spacing:.14em;margin:0 0 8px}
+h1{font-size:clamp(32px,6vw,50px);line-height:1.12;margin:0 0 8px}
+h2{color:var(--lav);font-size:23px;line-height:1.25;margin:30px 0 10px}
+p{margin:12px 0}
+ul{padding-left:22px}
+li{padding-left:3px;margin:9px 0}
+footer{text-align:center;padding:22px 0;font-size:13px}
+@media(max-width:560px){.page{padding:24px 0}.panel{border-radius:21px}.brand img{width:56px;height:56px}}

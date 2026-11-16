@@ -53,6 +53,7 @@ class MainActivity : AppCompatActivity(), AdMobHelper.ConsentCallbacks {
         }
         ViewCompat.requestApplyInsets(binding.root)
         store = RotationStore(this)
+        binding.appInfoText.text = getString(R.string.app_info, currentVersionName())
         buildModeCards()
 
         binding.navControl.setOnClickListener { showPage(PAGE_CONTROL) }
@@ -212,6 +213,10 @@ class MainActivity : AppCompatActivity(), AdMobHelper.ConsentCallbacks {
             RotationForegroundService.start(this, store.lastMode)
         }
     }
+
+    @Suppress("DEPRECATION")
+    private fun currentVersionName(): String =
+        packageManager.getPackageInfo(packageName, 0).versionName.orEmpty()
 
     private fun buildModeCards() {
         binding.modeGrid.columnCount = 3

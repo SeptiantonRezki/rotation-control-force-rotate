@@ -68,7 +68,7 @@ Perubahan pengaturan rotasi bersifat system-wide, tetapi Android, aplikasi terte
 
 ## 7. Verifikasi dan Batas Status
 
-Revisi global-only ini berhasil dibangun pada 16 November 2026 dengan `:app:bundleRelease` dan `:app:assembleRelease`. APK release berukuran 4,083,667 byte (3.89 MiB), lebih besar dari sasaran 3.5 MB; AAB berukuran 6,835,764 byte (6.52 MiB). APK lolos verifikasi apksigner dan pemeriksaan alignment 16 KB; AAB lolos verifikasi jarsigner dengan sertifikat upload key lokal. Analyzer mengonfirmasi target API 36. Manifest hasil release tidak berisi `QUERY_ALL_PACKAGES` atau deklarasi AccessibilityService. Paket belum diunggah ke Play Console.
+Build pengganti untuk kode versi 1 yang telah dipakai di Play Console menggunakan `versionCode` 2 dan `versionName` 1.0.1. Pada 16 November 2026, `:app:assembleDebug`, `:app:bundleRelease`, dan `:app:assembleRelease` berhasil. APK release berukuran 4,083,919 byte (3.89 MiB), lebih besar dari sasaran 3.5 MB; AAB berukuran 6,829,270 byte (6.51 MiB). APK lolos verifikasi apksigner dan pemeriksaan alignment 16 KB; AAB lolos verifikasi jarsigner dengan sertifikat upload key lokal. Analyzer mengonfirmasi code 2, version name 1.0.1, dan target API 36. Manifest hasil release tidak berisi `QUERY_ALL_PACKAGES` atau deklarasi AccessibilityService. AAB baru belum diunggah ke Play Console.
 
 Smoke check pada emulator API 35 memakai aplikasi terbaru: Control terbuka, pilihan mode dapat diubah, dan navigasi Settings berfungsi tanpa force close. Ini memverifikasi tampilan dan perpindahan tab pada emulator, bukan seluruh perilaku di perangkat fisik.
 

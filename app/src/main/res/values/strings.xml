@@ -1,1 +1,4 @@
-<resources><string name="app_name">Rotation Control</string></resources>
+<resources>
+    <string name="app_name">Rotation Control</string>
+    <string name="app_info">Rotation Control: Force Rotate · Version %1$s\nRotation behavior depends on Android and device manufacturer policies.</string>
+</resources>

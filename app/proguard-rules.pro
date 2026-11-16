@@ -1,7 +1,6 @@
 # Android instantiates these components by their manifest class names. Keep their constructors
 # and callbacks under R8 full mode. The AdMob and UMP AARs contribute their own consumer rules.
 -keep,allowoptimization class com.rotationcontrol.force.service.RotationForegroundService { *; }
--keep,allowoptimization class com.rotationcontrol.force.accessibility.RotationAccessibilityService { *; }
 -keep,allowoptimization class com.rotationcontrol.force.receiver.BootCompletedReceiver { *; }
 -keep,allowoptimization class com.rotationcontrol.force.RotationControlApp { *; }
 -keep,allowoptimization class com.rotationcontrol.force.ui.MainActivity { *; }

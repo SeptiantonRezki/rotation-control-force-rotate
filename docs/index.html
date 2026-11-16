@@ -44,13 +44,10 @@
   <section class="card">
     <h2>Information used on your device</h2>
     <ul>
-      <li><strong>Rotation settings and history:</strong> The app stores your service state, selected rotation mode, up to ten recent mode selections with timestamps, and per-app rotation choices in Android device-protected SharedPreferences. This information stays on your device and is used to apply and restore your settings.</li>
-      <li><strong>Installed app visibility:</strong> If you open Per-App, Android package visibility is used to find apps with a launcher activity so you can choose a profile. The app uses package names locally for the picker and profiles. It does not send your installed-app list or selected package names to the developer's server or include them in requests that the app creates for ads.</li>
-      <li><strong>Accessibility service:</strong> If you enable Per-App Rotation in Android Accessibility settings, the service reads the package name from foreground window-state events to apply a saved profile. It does not read screen text or window content, capture screenshots, or send those package names to the developer.</li>
+      <li><strong>Rotation settings and history:</strong> The app stores your service state, selected global rotation mode, and up to ten recent mode selections with timestamps in Android device-protected SharedPreferences. This information stays on your device and is used to apply and restore your settings.</li>
       <li><strong>Optional phone-call bypass:</strong> If you enable this setting and grant Phone state access, the app uses only IDLE, RINGING, and OFFHOOK call states to pause and resume rotation. It does not use phone numbers or call history.</li>
       <li><strong>System settings access:</strong> Android's Modify system settings access is used to update the device's rotation settings. The app does not use a screen overlay to control rotation.</li>
     </ul>
-    <p>Android grants package visibility at the application level, which includes code from included SDKs. The app does not ask the advertising SDK to read or use the installed-app list. See the third-party SDK section below for Google's own data practices.</p>
   </section>
 
   <section class="card">
@@ -67,7 +64,7 @@
 
   <section class="card">
     <h2>Sharing, retention, and deletion</h2>
-    <p>The developer does not receive the local rotation history, profiles, package names, or call states. Google processes information through the advertising and consent SDKs as described above and in Google's policies. We do not sell personal information.</p>
+    <p>The developer does not receive local rotation settings, rotation history, or call-state information. Google processes information through the advertising and consent SDKs as described above and in Google's policies. We do not sell personal information.</p>
     <p>Local settings remain on the device until you clear Rotation Control's storage or uninstall the app. The app does not create an account, so account deletion is not applicable. Google controls retention of data handled by its services; use Google's privacy and advertising controls for those requests.</p>
   </section>
 

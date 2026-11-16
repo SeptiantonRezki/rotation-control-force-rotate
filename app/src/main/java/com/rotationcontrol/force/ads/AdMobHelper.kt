@@ -86,9 +86,9 @@ object AdMobHelper {
     fun loadBanner(activity: Activity, container: FrameLayout) {
         val existingAd = container.getChildAt(0) as? AdView
         if (existingAd?.adUnitId == BANNER_ID) {
-            container.visibility = View.VISIBLE
             return
         }
+        container.visibility = View.INVISIBLE
         existingAd?.destroy()
         if (container.width <= container.paddingLeft + container.paddingRight) {
             val activityRef = WeakReference(activity)
@@ -112,6 +112,22 @@ object AdMobHelper {
         ad.setAdSize(AdSize.getLargeAnchoredAdaptiveBannerAdSize(activity, widthDp))
         container.removeAllViews()
         container.addView(ad, FrameLayout.LayoutParams(-1, -2))
+        val containerRef = WeakReference(container)
+        ad.adListener = object : AdListener() {
+            override fun onAdLoaded() {
+                val current = containerRef.get() ?: return
+                if (current.getChildAt(0) === ad) current.visibility = View.VISIBLE
+            }
+
+            override fun onAdFailedToLoad(error: LoadAdError) {
+                val current = containerRef.get() ?: return
+                if (current.getChildAt(0) === ad) {
+                    current.removeView(ad)
+                    current.visibility = View.GONE
+                    ad.destroy()
+                }
+            }
+        }
         ad.loadAd(AdRequest.Builder().build())
     }
 
@@ -171,6 +187,7 @@ object AdMobHelper {
             container.tag = null
             (container.getChildAt(0) as? AdView)?.destroy()
             container.removeAllViews()
+            container.visibility = View.GONE
         }
     }
 
